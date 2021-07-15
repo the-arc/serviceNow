@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph/>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>sample1</label>
+        <order>100</order>
+        <record_script><![CDATA[var max = 10;
+var t = data;
+data.count = 0;
+var items = data.items = [];
+
+var user = gs.getUser().getID();
+items.record_watchers = [];
+items.record_watchers.push({'table':'alm_asset','filter':'assigned_to=' + user.toString()});
+
+var gr = new GlideRecord('alm_asset');
+gr.addQuery("assigned_to", user);
+gr.orderBy('display_name')
+gr.setLimit(max);
+gr.query();
+
+while (gr.next()) {
+  var a = {};
+  var title = gr.display_name.toString() ;
+  addCI(title, gr.sys_id);
+}
+
+function addCI(title, query) {
+    data.count++;
+    var link = {};
+    link.title = title;
+    link.type = 'link';
+    link.href='?id=index'; // ホームページを開く
+    // link.href='nav_to.do?uri=alm_hardware.do?sys_id=' + query; // 当該資産ページを開く
+    items.push(link);
+}]]></record_script>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="sample1_portal">5c0a592d87513010fbcb99383cbb35b3</sp_page>
+        <sp_rectangle_menu display_value="SP ヘッダーメニュー">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 08:22:23</sys_created_on>
+        <sys_id>26cb7ae187d93010fbcb99383cbb352a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>sample1</sys_name>
+        <sys_package display_value="Sample1" source="x_659815_sample1">13ba175b87b4b010fbcb99383cbb359c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sample1">13ba175b87b4b010fbcb99383cbb359c</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_26cb7ae187d93010fbcb99383cbb352a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 08:24:31</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=26cb7ae187d93010fbcb99383cbb352a"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>26cb7ae187d93010fbcb99383cbb352a</documentkey>
+        <fieldname>hint</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 08:22:23</sys_created_on>
+        <sys_id>77ebf6a187d93010fbcb99383cbb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 08:22:23</sys_updated_on>
+        <tablename>sp_rectangle_menu_item</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>26cb7ae187d93010fbcb99383cbb352a</documentkey>
+        <fieldname>label</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 08:22:23</sys_created_on>
+        <sys_id>b3ebf6a187d93010fbcb99383cbb356a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 08:22:23</sys_updated_on>
+        <tablename>sp_rectangle_menu_item</tablename>
+        <value>sample1</value>
+    </sys_translated_text>
+</record_update>

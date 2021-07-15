@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	$scope.post = function(){
+		var test = document.getElementById("test").value;
+		var test1 = document.getElementById("test1").value;
+		var requestBody = "{test: "+test+",test1: \""+test1+"\"}"; 
+		console.log(requestBody);
+		
+		var client=new XMLHttpRequest();
+		client.open("post","https://dev72061.service-now.com/api/now/table/x_659815_sample1_test_table?sysparm_fields=test%2Ctest1");
+
+		client.setRequestHeader('Accept','application/json');
+		client.setRequestHeader('Content-Type','application/json');
+
+		//Eg. UserName="admin", Password="admin" for this code sample.
+		client.setRequestHeader('Authorization', 'Basic '+btoa('admin'+':'+'Gameover123!'));
+
+		client.onreadystatechange = function() { 
+			if(this.readyState == this.DONE) {
+				document.getElementById("response").innerHTML=this.status + this.response; 
+			}
+		}; 
+		client.send(requestBody);
+		window.location.reload();
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>div{
+  border:1px solid #ddd;
+  border-radius:5px;
+  display: flex;
+  padding:10px;
+  vertical-align: middle;
+  
+  p{
+    padding-left:20px;
+  }
+  input{
+    border:1px solid #ccc;
+  	border-radius:5px;
+    height:30px;
+  }
+  button{
+    background-color:#5ae;
+    border:1px solid #eee;
+    border-radius:5px;
+    color:#fafafa;
+    font-weight:bold;
+    height:30px;
+    margin-left:20px;
+    width:90px;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>sample1_post</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>sample1-post</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	(function functionName(parameter){
+ 
+   gs.debug("これはdebugログです");
+ gs.info("これはinfoログです");
+ gs.warn("これはwarnログです");
+ gs.error("これはerrorログです");
+ 
+	})('value');//Note the parenthesis indicating this function should run.
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 08:03:22</sys_created_on>
+        <sys_id>1997f6e987993010fbcb99383cbb3512</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>sample1-post</sys_name>
+        <sys_package display_value="Sample1" source="x_659815_sample1">13ba175b87b4b010fbcb99383cbb359c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sample1">13ba175b87b4b010fbcb99383cbb359c</sys_scope>
+        <sys_update_name>sp_widget_1997f6e987993010fbcb99383cbb3512</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-15 05:58:27</sys_updated_on>
+        <template><![CDATA[<div>
+  <p>test</p>
+	<input id="test" type="number" value="">
+  <p>test1</p>
+  <input id="test1" type="text" value="">
+  <button ng-click="post()">送信</button>
+<!-- your widget template -->
+</div>]]></template>
+    </sp_widget>
+</record_update>

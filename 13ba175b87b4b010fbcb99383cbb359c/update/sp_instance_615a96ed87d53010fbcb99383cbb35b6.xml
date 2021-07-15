@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">316a196d87513010fbcb99383cbb35f9</sp_column>
+        <sp_widget display_value="パンくずリスト">0fb269305b3212000d7ec7ad31f91ae2</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 05:55:35</sys_created_on>
+        <sys_id>615a96ed87d53010fbcb99383cbb35b6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Sample1" source="x_659815_sample1">13ba175b87b4b010fbcb99383cbb359c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sample1">13ba175b87b4b010fbcb99383cbb359c</sys_scope>
+        <sys_update_name>sp_instance_615a96ed87d53010fbcb99383cbb35b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 05:55:46</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=615a96ed87d53010fbcb99383cbb35b6"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>615a96ed87d53010fbcb99383cbb35b6</documentkey>
+        <fieldname>short_description</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 05:55:35</sys_created_on>
+        <sys_id>ad5a96ed87d53010fbcb99383cbb35b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 05:55:35</sys_updated_on>
+        <tablename>sp_instance</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>615a96ed87d53010fbcb99383cbb35b6</documentkey>
+        <fieldname>title</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 05:55:35</sys_created_on>
+        <sys_id>ed5a96ed87d53010fbcb99383cbb35b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 05:55:35</sys_updated_on>
+        <tablename>sp_instance</tablename>
+        <value/>
+    </sys_translated_text>
+</record_update>

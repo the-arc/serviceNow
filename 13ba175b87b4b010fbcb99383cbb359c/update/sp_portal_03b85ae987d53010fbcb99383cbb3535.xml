@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <enable_ais>false</enable_ais>
+        <hide_portal_name>false</hide_portal_name>
+        <homepage/>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo>4c8b1e2187193010fbcb99383cbb3591</logo>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <search_application/>
+        <search_results_configuration/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu display_value="SP ヘッダーメニュー">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 05:49:00</sys_created_on>
+        <sys_id>03b85ae987d53010fbcb99383cbb3535</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>sample1-portal</sys_name>
+        <sys_package display_value="Sample1" source="x_659815_sample1">13ba175b87b4b010fbcb99383cbb359c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Sample1">13ba175b87b4b010fbcb99383cbb359c</sys_scope>
+        <sys_update_name>sp_portal_03b85ae987d53010fbcb99383cbb3535</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 06:03:07</sys_updated_on>
+        <theme/>
+        <title>sample1-portal</title>
+        <ts_index_group/>
+        <url_suffix>sample1_portal</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=03b85ae987d53010fbcb99383cbb3535"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>03b85ae987d53010fbcb99383cbb3535</documentkey>
+        <fieldname>title</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 05:49:00</sys_created_on>
+        <sys_id>0dd89e2d87d53010fbcb99383cbb3544</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 05:49:00</sys_updated_on>
+        <tablename>sp_portal</tablename>
+        <value>sample1-portal</value>
+    </sys_translated_text>
+</record_update>
